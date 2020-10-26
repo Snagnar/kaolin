@@ -518,5 +518,5 @@ class PointNetSegmenter(nn.Module):
         x = self.last_conv_layer(x)
         x = x.transpose(2, 1).contiguous()
         # x = F.log_softmax(x.view(-1, self.num_classes), dim=-1)
-        print("x.shape = {}".format(x.shape))
+        # print("x.shape = {}".format(x.shape))
         return x.view(batchsize, num_points, self.num_classes)
